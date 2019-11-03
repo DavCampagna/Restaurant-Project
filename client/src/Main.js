@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import NavBar from './NavBar';
+import Home from './home/components/Home';
 import Booking from './bookings/components/Booking';
+import Customer from './customers/components/Customer';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
@@ -20,9 +22,9 @@ class Main extends Component {
                 <Fragment>
                     <NavBar />
                     <Switch>
-                        {/* <Route exact path="/" component={Home}/> */}
+                        <Route exact path="/" component={Home}/>
                         <Route path="/bookings" component={Booking}/>
-
+                        <Route path="/customers" component={Customer}/>
                     </Switch>
                 </Fragment>
             </Router>
